@@ -1,15 +1,18 @@
-// console.log('Hello World !');
+//function normal statement
+function sayHello(){
+    console.log('Hello !');
+}
 
-// setTimeout(function(){
-//     console.log('3 seconds passed');
-// }, 3000);
-let inter = 0;
+//callback
+function callFunction(func){
+    func();
+}
 
-const timer = setInterval(() => {
-    inter += 2;
-    console.log(inter + ' seconds passed !');
 
-    if(inter >= 10){
-        clearInterval(timer);
-    }
-}, 2000);
+//function expression
+var sayBye = function(){
+    console.log('Bye !');
+};
+
+//sayBye();
+callFunction(sayBye);
